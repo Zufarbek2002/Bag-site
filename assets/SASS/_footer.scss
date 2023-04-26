@@ -1,0 +1,62 @@
+@import "./variables";
+#footer{
+    background-color: $mainTextColor;
+    .footer_section{
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        color: $extraTextColor;
+        flex-wrap: wrap;
+        padding: 97px 0;
+        @media (max-width: 545px) {
+            text-align: center;
+        }
+    }
+    p{
+        width: 224px;
+        color: $extraTextColor;
+        opacity: 70%;
+    }
+    h1{
+        color: $extraTextColor;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        padding-bottom: 20px;
+    }
+    a{
+        color: $extraTextColor;
+        opacity: 70%;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 264px;
+        gap: 30px;
+        @media (max-width: 545px) {
+            align-items: center;
+        }
+        input{
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid $extraTextColor;
+            opacity: 70%;
+            padding: 10px;
+            text-transform: capitalize;
+            border-radius: 5px;
+            color: $extraTextColor;
+            outline: none;
+        }
+        .btn{
+            width: 120px;
+            @media (max-width: 545px) {
+                width: 100%;
+            }
+        }
+    }
+}

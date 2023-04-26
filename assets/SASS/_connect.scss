@@ -1,0 +1,116 @@
+@import "./variables";
+#connect{
+    .connect_section{
+        background-color: $mainTextColor;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 850px) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .connect_img{
+        height: 549px;
+        img{
+            height: 549px;
+            @media (max-width: 1230px) {
+                width: 400px;
+            }
+            @media (max-width: 1110px) {
+                width: 300px;
+            }
+        }
+    }
+    .connect_text{
+        margin: 0 auto;
+        padding: 100px 0;
+    }
+    h1{
+        color: $extraTextColor;
+        font-size: 1.95rem;
+        width: 447px;
+        margin-bottom: 44px;
+        text-transform: capitalize;
+        @media (max-width: 1230px) {
+            font-size: 1.5rem;
+        }
+        @media (max-width: 500px) {
+            width: 95%;
+            margin: 0 10px;
+        }
+    }
+    form{
+        color: $extraTextColor;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        @media (max-width: 1230px) {
+            width: 450px;
+        }
+        @media (max-width: 900px) {
+            width: 400px;
+            margin: 0 5px;
+        }
+        @media (max-width: 400px) {
+            width: 95%;
+        }
+        .form_name{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 900px) {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 20px;
+            }
+            input{
+                opacity: 35%;
+                width: 232px;
+                @media (max-width: 1230px) {
+                    width: 222px;
+                }
+                @media (max-width: 900px) {
+                    width: 100%;
+                }   
+            }
+        }
+        input{
+            color: $extraTextColor;
+            font-size: 1.01rem;
+            padding: 10px 30px;
+            border-radius: 10px;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid $extraTextColor;
+            @media (max-width: 900px) {
+                padding-left: 15px;
+            }
+        }
+        .address{
+            opacity: 35%;
+            width: 100%;
+        }
+        .form_check{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            label, input{
+                opacity: 35%;
+                cursor: pointer;
+            }
+            .btn{
+                margin-left: 70px;
+                transition: all .6s ease-in-out;
+                font-size: 1.1rem;
+                @media (max-width: 1235px) {
+                    margin-left: 50px;
+                }
+                @media (max-width: 900px) {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}

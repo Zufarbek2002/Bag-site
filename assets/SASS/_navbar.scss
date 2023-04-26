@@ -1,0 +1,70 @@
+@import "./variables";
+#navbar{
+    background-color: $mainTextColor;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    .navbar_section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+    .navbar_menu{
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        gap: 90px;
+        @media (max-width:870px) {
+            gap: 30px;
+        }
+        @media (max-width:768px) {
+            position: fixed;
+            z-index: 99;
+            width: 100vw;
+            height: calc(100vh - 95px);
+            left: -100vw;
+            bottom: 0;
+            background-color: $mainTextColor;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all .6s ease-in-out;
+        }
+    }
+    ul{
+        display: flex;
+        gap: 40px;
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+    }
+    a{
+        color: $opacityColor;
+        font-size: 1.01rem;
+        font-weight: 400;
+        &:hover{
+            color: $extraTextColor;
+            transition: all .6s;
+        }
+    }
+    .active,.btn{
+        color: $extraTextColor;
+    }
+    label{
+        color: $extraTextColor;
+        cursor: pointer;
+        display: none;
+        @media (max-width:768px) {
+            display: block;
+        }
+    }
+    #check{
+        display: none;
+    }
+    #check:checked ~ .navbar_menu{
+        left: 0;
+    }
+}
+

@@ -1,0 +1,49 @@
+@import "./variables";
+#bags{
+    margin: 100px 0 130px;
+    .bags_text{
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 1150px) {
+            flex-wrap: wrap ;
+        }
+    }
+    .hr{
+        border: 1px solid $btnbgColor;
+        opacity: 10%;
+    }
+    .bags_img{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 1140px) {
+            flex-wrap: wrap ;
+        }
+        @media (max-width: 560px) {
+            justify-content: center;
+        }
+        img{
+            border: 1px solid #a3a3a36d;
+            border-radius: 10px;
+            margin-top: 43px;
+            &:hover{
+                border: 1px solid $mainTextColor;
+                transition: all .6s;
+            }
+        }
+    }
+    a{
+        color: $mainTextColor;
+        font-size: 1.25rem;
+        font-weight: 500;
+        opacity: 80%;
+        text-transform: capitalize;
+        padding: 41px;
+        border-bottom: 5px solid $extraTextColor;
+        &:hover{
+            opacity: 100%;
+            border-bottom: 5px solid $btnbgColor;
+            transition: all .6s;
+        }
+    }
+}
